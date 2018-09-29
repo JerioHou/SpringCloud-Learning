@@ -9,7 +9,6 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.concurrent.TimeUnit;
 
 /**
  * Created by Jerio on 2018/09/29
@@ -22,9 +21,8 @@ public class TestController {
 
     @GetMapping("/dc")
     public String dc() throws InterruptedException {
-        TimeUnit.SECONDS.sleep(5);
+//        TimeUnit.SECONDS.sleep(5);
         String services = "Services: " + discoveryClient.getServices();
-        System.out.println(services);
         return services;
     }
 
